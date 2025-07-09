@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prince-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: prince-app
+  template:
+    metadata:
+      labels:
+        app: prince-app
+    spec:
+      containers:
+      - name: prince
+        image: priyanshu1008/prince-app:v20250701171222
+        ports:
+        - containerPort: 5000
