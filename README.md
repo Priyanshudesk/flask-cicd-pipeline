@@ -60,6 +60,9 @@ Whenever we are creating pipeline, it is best practice to test application local
     http://localhost:5000
     ```
 
+# Test CI/CD Trigger
+
+
 Note: This application is running on 5000 port, but if you want to change, you can change the port in app.py script.
 
 ---
