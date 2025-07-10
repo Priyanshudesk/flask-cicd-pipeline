@@ -342,3 +342,4 @@ Application running on http://172.29.213.129:30008
 # argocd
 mission sucessfull
 >>>>>>> c067fd939c0c1b480edfa2689704a12c7c95f1f4
+# trigger again
