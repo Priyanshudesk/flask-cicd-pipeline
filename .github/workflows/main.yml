@@ -70,7 +70,7 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config user.name "Priyanshudesk"
-          git config user.email "actions@github"
+          git config user.email "actions@github.com"
 
           git add deploy/deploy.yaml
           git commit -m "Update deploy.yaml with new image version - $VERSION" || echo "No changes to commit"
