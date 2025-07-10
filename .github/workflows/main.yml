@@ -74,7 +74,8 @@ jobs:
 
           git add deploy/deploy.yaml
           git commit -m "Update deploy.yaml with new image version - $VERSION" || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/Priyanshudesk/flask-cicd-pipeline.git
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/Priyanshudesk/flask-cicd-pipeline.git
+
           git push origin main
 
       
