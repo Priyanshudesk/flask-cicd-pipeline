@@ -63,24 +63,3 @@ jobs:
           cat deploy/deploy.yaml
           sed -i "s|image: priyanshu1008/prince-app:.*|image: priyanshu1008/prince-app:${{ env.VERSION }}|g" deploy/deploy.yaml
           cat deploy/deploy.yaml
-
-      # Update Github
-      - name: Commit & Push changes
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
-        run: |
-          git config user.name "Priyanshudesk"
-          git config user.email "actions@github.com"
-
-          git add deploy/deploy.yaml
-          git commit -m "Update deploy.yaml with new image version - $VERSION" || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/Priyanshudesk/flask-cicd-pipeline.git
-
-          git push origin main
-
-      
-
-
-        
-      
-
